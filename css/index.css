@@ -13,7 +13,7 @@ body{
     background-color: #0cb9ad;
 }
 
-.nav{
+.navbar{
     --_c-nav-height: 70px;
     color: grey;
 
@@ -47,7 +47,7 @@ body{
              &:nth-child(1){
                  margin-left: auto;
              }
-             &:nth-child(6){
+             &:last-child{
                  margin-left:auto;
              }
          }
