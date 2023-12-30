@@ -17,6 +17,7 @@ body{
     --_c-nav-height: 70px;
     color: grey;
 
+    position: sticky;
     height: var(--_c-nav-height);
     min-height: max-content;
     background-color: #075d55;
@@ -34,13 +35,21 @@ body{
         }
     }
     .nav-links{
+        /*background: #0cb9ad;*/
         list-style: none;
         display: flex;
         flex-flow: row nowrap;
+        flex-grow: 1;
 
          & li{
              display: flex;
              align-items: center;
+             &:nth-child(1){
+                 margin-left: auto;
+             }
+             &:nth-child(6){
+                 margin-left:auto;
+             }
          }
 
         & a{
@@ -58,7 +67,6 @@ body{
 
     & button{
         background-color: transparent;
-        margin:0;
         color: grey;
         border: double 4px grey;
         border-radius: .7rem;
@@ -80,5 +88,32 @@ body{
         width: 40px;
     }
 
+    @media screen and (max-width: 690px) {
+
+        & li{
+            margin: 0 auto;
+        }
+
+        .nav-links{
+            background: #075d55 ;
+            position: absolute;
+            top: 100%;
+            flex-direction: column;
+            align-items: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 0 0 1em;
+        }
+
+        .d-none{
+            display: none;
+        }
+
+        .nav-btn{
+            display: block;
+        }
+
+    }
 
 }
