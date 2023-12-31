@@ -117,3 +117,65 @@ body{
     }
 
 }
+
+.projects{
+    display: flex;
+    width: 85%;
+    margin: 1em auto;
+
+    .project-selection{
+        height: 100%;
+        width: 20%;
+        margin: .5em;
+        border-radius: 1em;
+
+
+        & h2{
+            text-align: center;
+            border-bottom: dashed 1px black;
+            padding: .5em;
+        }
+        & p{
+            margin-top: .2em;
+            padding: .5em;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.6);
+                border-radius: .5em;
+                color: lightgray;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .project-preview{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-gap: 1em; /* Adjust the gap between grid items as needed */
+        padding: .5em;
+    }
+
+    .project{
+        background-color: rgba(0, 0, 0, 0.38);
+        border-radius: 1rem;
+        padding: .5em;
+
+        .preview-container{
+            background-color: #ff4400;
+            border-radius: .5em;
+            display: flex;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+            width: 100%;
+        }
+
+        & p{
+            margin-top: .5em;
+        }
+
+
+    }
+
+}
