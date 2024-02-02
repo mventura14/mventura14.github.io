@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    background-color: aqua;
+    /* display: grid; */
+    /* place-items: center; */
+}
+.component-container {
+    --_color-1: #4a8cb6;
+    --_color-2: #162409;
+    --_color-3: #fc5c64;
+    --_color-4: #10375c;
+    --_color-5: #97844a;
+    --_color-6: #dd8c89;
+    --_color-7: #59bdcd;
+
+    --_bgImg-1: url('https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-2: url('https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-3: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-4: url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-5: url('https://images.pexels.com/photos/9521688/pexels-photo-9521688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-6: url('https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    --_bgImg-7: url('https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+
+    display: flex;
+
+    >div {
+        height: 50%;
+        width: 80%;
+        display: flex;
+        padding: 1em;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    height: 100%;
+
+
+
+    &:has(input:checked[name='group1']) {
+        &:has(input:checked) {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+        &:has(input:checked[value='slide1']) {
+            background-color: var(--_color-1);
+            background-image: var(--_bgImg-1);
+
+        }
+
+        &:has(input:checked[value='slide2']) {
+            background-color: var(--_color-2);
+            background-image: var(--_bgImg-2);
+
+        }
+
+        &:has(input:checked[value='slide3']) {
+            background-color: var(--_color-3);
+            background-image: var(--_bgImg-3);
+
+        }
+
+        &:has(input:checked[value='slide4']) {
+            background-color: var(--_color-4);
+            background-image: var(--_bgImg-4);
+
+        }
+
+        &:has(input:checked[value='slide5']) {
+            background-color: var(--_color-5);
+            background-image: var(--_bgImg-5);
+
+        }
+
+        &:has(input:checked[value='slide6']) {
+            background-color: var(--_color-6);
+            background-image: var(--_bgImg-6);
+
+        }
+
+        &:has(input:checked[value='empty']) {
+            background-color: var(--_color-7);
+            background-image: var(--_bgImg-7);
+
+        }
+    }
+
+
+
+    & label {
+        /* width: 100%; */
+        border-radius: 2em;
+        height: 100%;
+        margin: auto 0;
+        /* min-height: 70px; */
+        min-width: 30px;
+        min-height: 30px;
+        width: 8%;
+        margin: .5em;
+        cursor: pointer;
+        transition: .2s cubic-bezier(0.05, 0.61, .041, .095);
+        box-shadow: 0 0 20px 0 black;
+
+
+        > div {
+            width: 100%;
+            height: 100%;
+            padding: 1em;
+            border-radius: 2em;
+            overflow: hidden;
+        }
+
+        &:has(input[name='group1']) {
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+
+
+            &:has(input:checked) {
+                flex: 1;
+                cursor: unset;
+                user-select: none;
+                overflow: hidden;
+                /* min-width: 600px; */
+
+
+                /* box-shadow: inset 0 0 20px 0 rgb(240, 239, 239); */
+
+                /* div {
+                    
+                } */
+
+
+            }
+
+            &:has(input[value='slide1']),
+            &:has(input:checked[value='slide1']) {
+                background-color: var(--_color-1);
+                background-image: var(--_bgImg-1);
+
+            }
+
+            &:has(input[value='slide2']),
+            &:has(input:checked[value='slide2']) {
+                background-color: var(--_color-2);
+                background-image: var(--_bgImg-2);
+
+            }
+
+            &:has(input[value='slide3']),
+            &:has(input:checked[value='slide3']) {
+                background-color: var(--_color-3);
+                background-image: var(--_bgImg-3);
+
+            }
+
+            &:has(input[value='slide4']),
+            &:has(input:checked[value='slide4']) {
+                background-color: var(--_color-4);
+                background-image: var(--_bgImg-4);
+
+            }
+
+            &:has(input[value='slide5']),
+            &:has(input:checked[value='slide5']) {
+                background-color: var(--_color-5);
+                background-image: var(--_bgImg-5);
+
+            }
+
+            &:has(input[value='slide6']),
+            &:has(input:checked[value='slide6']) {
+                background-color: var(--_color-6);
+                background-image: var(--_bgImg-6);
+
+            }
+
+            &:has(input[value='empty']),
+            &:has(input:checked[value='slide7']) {
+                background-color: var(--_color-7);
+                background-image: var(--_bgImg-7);
+
+            }
+
+
+            & div {
+                display: flex;
+            }
+
+
+
+        }
+
+
+
+        .visually-hidden {
+            --_0px: 0px;
+            position: absolute;
+            width: var(--_0px);
+            height: var(--_0px);
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+
+            /* visibility: hidden; */
+        }
+    }
+
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

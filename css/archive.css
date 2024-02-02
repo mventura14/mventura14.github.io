@@ -5,46 +5,54 @@
 
 
 
-.card-cont{
+.card-cont {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 1em;
     flex: 1;
+    padding: 1em;
 }
 
 .container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-  }
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio (9 / 16 * 100) */
 
-  .img-cont{
+}
+
+.img-cont {
     position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background-color: red;
-  }
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: red;
+
+    &:has(img) {
+        padding-top: 0;
+    }
+
+}
 
 
-  .modal{
+.modal {
     background-color: black;
     position: relative;
     width: 80%;
     height: 80%;
     resize: both;
     overflow: hidden;
-    
 
-    &::backdrop{
+
+    &::backdrop {
         background-color: rgba(0, 0, 0, 0.719);
     }
 
-    & iframe{
+    & iframe {
         width: 100%;
         height: 100%;
     }
 
-    & button{
+    & button {
         position: absolute;
         display: block;
         margin-bottom: .5em;
@@ -60,8 +68,8 @@
         font-size: 1.2rem;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             background-color: red;
         }
     }
-  }
+}
